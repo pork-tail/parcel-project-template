@@ -23,8 +23,9 @@
     display: block;
     justify-content: center;
     align-items: center;
-    width: 80px;
-    height: 28px;
+    width: 100%;
+    max-width: 80px;
+    max-height: 28px;
 }
 .menu_wriper{
     display: none;
@@ -53,16 +54,15 @@
     &:focus+.menu_wriper{
         display: block;
     }
+    &:focus~.modal_button{
+        display: block;
+    }
 }
 .button_menu_close{
     border: none;
     outline: none;
     margin: 38px 0 0 auto;
     background-color: transparent;
-    
-    &:focus .menu_wripe{
-        display:none;
-    }
 }
 .button_menu_svg{
     display: flex;
@@ -71,17 +71,26 @@
     height: 20px;
 }
 .modal_button{
-    display: block;
+    display: none;
     width: 100%;
     max-width: 260px;
+    max-height: 48px;
 
     margin: 0 auto;
     padding: 14px 0;
+
     text-align: center;
     text-transform: uppercase;
     color: $accent-color;
     background-color: transparent;
     border: 2px solid #FF6B09;
+    outline: none;
+
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
 }
 .navi{
     margin: 50px 0;
@@ -98,14 +107,13 @@
     }
 }
 /* ====================== HEADER-TABLET =====================================*/
-
 @media screen and (min-width:768px){
     .logo_icon_svg{
         display: block;
         justify-content: center;
         align-items: center;
-        width: 128px;
-        height: 48px;
+        max-width: 128px;
+        max-height: 48px;
     }
     .logo_black{
       margin: 42px 0 0 auto;
@@ -114,9 +122,80 @@
       margin: 42px 0 0 auto;
     }
     .menu_wriper_container{
-        width: 768px;
+        max-width: 768px;
         margin: 0 auto;
         padding-right: 40px;
         padding-left: 40px;
     }
+    .navi{
+        margin: 70px 25% 0px 25%;
+    }
+    .modal_button{
+        display: block;
+        z-index: 2;
+        position: absolute;
+        top:9%;
+        left: 61%;
+    }
+    .button_menu_open{
+        
+        &:focus~.modal_button{
+          opacity: 0;
+        }
+    }
+}
+/* ====================== HEADER-DASKTOP =====================================*/
+@media screen and (min-width:1344px){
+    .logo_white{
+        display: none;
+    }
+    .button_menu_open{
+        display: none;
+    }
+    .button_menu_close{
+        display: none;
+    }
+    .menu_wriper_container{
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .menu_wriper{
+        display: flex;
+        position: static;
+        background-color: $secondary-color;
+    }
+    .modal_button{
+      max-width: 333px;
+      max-height: 70px;
+
+        top:9%;
+        left: 90%;
+    }
+    .navi{
+        margin-top: 42px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .navi_list{
+        display: flex;
+    }
+    .navi_link{
+        font-weight: 800;
+        font-size: 14px;
+        line-height: 1.2;
+        letter-spacing: 0.03em;
+        color: $main-text-color;
+        text-align: center;
+        text-transform: uppercase;
+    
+        &.current{
+            color: $accent-color;
+        }
+    }
+    .logo_black{
+        display: block;
+        margin: 42px 0 0 0;
+    }
+  
 }
