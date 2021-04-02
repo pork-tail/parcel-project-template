@@ -1,3 +1,4 @@
+/* ====================== HEADER-MOBILE =====================================*/
 .header .container{
     display: flex;
     align-items: center;
@@ -11,16 +12,12 @@
 .logo_black{
     display:block;
     width: 100%;
-    margin-top: 35px;
-    margin-left: auto;
-    margin-right: 0;
+    margin: 35px 0 0 auto;
 }
 .logo_white{
     display: block;
     width: 100%;
-    margin-top: 35px;
-    margin-left: auto;
-    margin-right: 0;
+    margin: 35px 0 0 auto;
 }
 .logo_icon_svg{
     display: block;
@@ -29,26 +26,6 @@
     width: 80px;
     height: 28px;
 }
-
-.button_menu_open{
-    display: block;
-    outline: none;
-    border: none;
-    margin-top: 38px;
-    margin-left: auto;
-    margin-right: 0;
-    background-color: transparent;
-    
-    &:focus+.menu_wriper{
-        display: block;
-    }
-    .button_menu_svg{
-        display: flex;
-        align-items: center;
-        width: 20px;
-        height: 20px;
-    }
-}
 .menu_wriper{
     display: none;
     position: fixed;
@@ -56,35 +33,47 @@
     height: 100%;
     left: 0%;
     top: 0%;
+    margin: 0 auto;
     background: rgba(17, 21, 24, 0.9);
-    padding-right: 20px;
-    padding-left: 20px;
-}
 
+    &_container{
+        margin: 0 auto;
+        padding-right: 20px;
+        padding-left: 20px;
+        max-width: 480px;
+    }
+}
+.button_menu_open{
+    display: block;
+    outline: none;
+    border: none;
+    margin: 38px 0 0 auto;
+    background-color: transparent;
+    
+    &:focus+.menu_wriper{
+        display: block;
+    }
+}
 .button_menu_close{
     border: none;
     outline: none;
-    margin-top: 38px;
-    margin-left: auto;
-    margin-right: 0;
+    margin: 38px 0 0 auto;
     background-color: transparent;
     
     &:focus .menu_wripe{
         display:none;
     }
-    .button_menu_svg{
-        display: flex;
-        align-items: center;
-        width: 20px;
-        height: 20px;
-    }
 }
-
+.button_menu_svg{
+    display: flex;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+}
 .modal_button{
     display: block;
     width: 100%;
-    max-width: 40px;
-    max-width: 259px;
+    max-width: 260px;
 
     margin: 0 auto;
     padding: 14px 0;
@@ -106,5 +95,28 @@
 
     &.current{
         color: $accent-color;
+    }
+}
+/* ====================== HEADER-TABLET =====================================*/
+
+@media screen and (min-width:768px){
+    .logo_icon_svg{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 128px;
+        height: 48px;
+    }
+    .logo_black{
+      margin: 42px 0 0 auto;
+    }
+    .logo_white{
+      margin: 42px 0 0 auto;
+    }
+    .menu_wriper_container{
+        width: 768px;
+        margin: 0 auto;
+        padding-right: 40px;
+        padding-left: 40px;
     }
 }
