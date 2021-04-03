@@ -4,28 +4,27 @@
     align-items: center;
     justify-content: space-between;
 }
-.logo_wriper_close{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.logo_black{
+.logo{
     display:block;
-    width: 100%;
-    margin: 35px 0 0 auto;
-}
-.logo_white{
-    display: block;
-    width: 100%;
-    margin: 35px 0 0 auto;
-}
-.logo_icon_svg{
-    display: block;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     max-width: 80px;
     max-height: 28px;
+
+    &.black{
+        margin: 35px 0 0 0;
+        max-width: 80px;
+    }
+    &.white{
+        margin: 35px 0 0 0;
+    }
+    &_icon_svg{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        max-width: 80px;
+        max-height: 28px;
+        margin-right: 0;
+    }
 }
 .menu_wriper{
     display: none;
@@ -38,37 +37,43 @@
     background: rgba(17, 21, 24, 0.9);
 
     &_container{
+        width: 100%;
+        max-width: 480px;
         margin: 0 auto;
         padding-right: 20px;
         padding-left: 20px;
-        max-width: 480px;
+    }
+    &_close{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
-.button_menu_open{
-    display: block;
+.button_menu{
     outline: none;
     border: none;
     margin: 38px 0 0 auto;
     background-color: transparent;
-    
-    &:focus+.menu_wriper{
+
+    &.open{
+        display: inline-block;
+        
+        &:focus+.menu_wriper{
+            display: block;
+        }
+        &:focus~.modal_button{
+            display: block;
+        }
+    }
+    &.close{
         display: block;
     }
-    &:focus~.modal_button{
-        display: block;
+    &_svg{
+        display: flex;
+        align-items: center;
+        width: 20px;
+        height: 20px;
     }
-}
-.button_menu_close{
-    border: none;
-    outline: none;
-    margin: 38px 0 0 auto;
-    background-color: transparent;
-}
-.button_menu_svg{
-    display: flex;
-    align-items: center;
-    width: 20px;
-    height: 20px;
 }
 .modal_button{
     display: none;
@@ -90,42 +95,51 @@
     top:50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2;
 }
 .navi{
     margin: 50px 0;
-}
-.navi_link{
-    font-weight: 800;
-    font-size: 20px;
-    line-height: 1.8;
-    letter-spacing: 0.03em;
-    color: $secondary-color;
 
-    &.current{
-        color: $accent-color;
+    &_link{
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 1.8;
+        letter-spacing: 0.03em;
+        color: $secondary-color;
+
+        &.current{
+            color: $accent-color;
+        }
     }
 }
 /* ====================== HEADER-TABLET =====================================*/
 @media screen and (min-width:768px){
-    .logo_icon_svg{
-        display: block;
-        justify-content: center;
-        align-items: center;
-        max-width: 128px;
+    
+    .logo{
+        max-width: 125px;
         max-height: 48px;
-    }
-    .logo_black{
-      margin: 42px 0 0 auto;
-    }
-    .logo_white{
-      margin: 42px 0 0 auto;
+
+        &.black{
+            margin: 42px 0 0 0;
+        }
+        &.white{
+            margin: 42px 0 0 0;
+        }
+        &_icon_svg{
+            max-width: 125px;
+            max-height: 48px;
+        }
     }
     .menu_wriper_container{
         max-width: 768px;
-        margin: 0 auto;
         padding-right: 40px;
         padding-left: 40px;
+    }
+    .button_menu.open{
+        margin-top: 42px;
+
+        &:focus~.modal_button{
+          opacity:0.2;
+       }
     }
     .navi{
         margin: 70px 25% 0px 25%;
@@ -134,68 +148,81 @@
         display: block;
         z-index: 2;
         position: absolute;
-        top:9%;
-        left: 61%;
+        top: 69%;
+        left: 69%;
     }
-    .button_menu_open{
-        
-        &:focus~.modal_button{
-          opacity: 0;
-        }
+    .header .container{
+        position: relative;
     }
 }
 /* ====================== HEADER-DASKTOP =====================================*/
 @media screen and (min-width:1344px){
-    .logo_white{
-        display: none;
+    
+    .logo{
+        &.white{
+            display: none;
+        }
+        &.black{
+            margin-top: 45px;
+            margin-right: 145px;
+        }
     }
-    .button_menu_open{
-        display: none;
-    }
-    .button_menu_close{
-        display: none;
-    }
-    .menu_wriper_container{
-        max-width: 100%;
-        padding: 0;
-        margin: 0;
+    .button_menu{
+        &.open{
+            display: none;
+        }
+        &.close{
+            display: none;
+        }
     }
     .menu_wriper{
-        display: flex;
         position: static;
+        display: flex;
         background-color: $secondary-color;
+
+        &_container{
+            max-width: 100%;
+            padding: 0;
+            margin: 0;
+        }
     }
     .modal_button{
-      max-width: 333px;
-      max-height: 70px;
-
+        max-width: 333px;
+        max-height: 70px;
         top:9%;
         left: 90%;
     }
     .navi{
-        margin-top: 42px;
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-    .navi_list{
-        display: flex;
-    }
-    .navi_link{
-        font-weight: 800;
-        font-size: 14px;
-        line-height: 1.2;
-        letter-spacing: 0.03em;
-        color: $main-text-color;
-        text-align: center;
-        text-transform: uppercase;
-    
-        &.current{
-            color: $accent-color;
+        margin: 60px 0 0 0;
+          
+        &_list{
+            display: flex;
+        }
+        &_item:not(:last-child){
+            margin-right: 40px;
+        }
+        &_link{
+            font-size: 14px;
+            line-height: 1.2;
+            color: $main-text-color;
+            text-align: center;
+            text-transform: uppercase;
         }
     }
-    .logo_black{
+    .modal_button{
         display: block;
-        margin: 42px 0 0 0;
+        z-index: 2;
+        position: absolute;
+        top: 62%;
+        left: 86%;
+
+        max-width: 336px;
+        height: 70px;
+
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 1.22;
+        letter-spacing: 0.14em;
     }
-  
 }
