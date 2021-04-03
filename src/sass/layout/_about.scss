@@ -1,0 +1,69 @@
+.about-section__section-title {
+  margin-bottom: 20px;
+}
+
+.about-section__image {
+  margin-bottom: 20px;
+
+  width: 243px;
+}
+.about-section__sub-title {
+  display: block;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #b9b9b9;
+
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+}
+
+.about-section__list-item {
+  display: flex;
+  margin-bottom: 20px;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.21;
+  letter-spacing: 0.06em;
+}
+
+.about-section__list-item::before {
+  content: '';
+  fill: $accent-color;
+  width: 18px;
+  height: 14px;
+
+  display: flex;
+  margin-right: 8px;
+
+  background-image: url('../images/teachers/check.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  viewport-fit: cover;
+}
+
+.about-section__line {
+  margin-bottom: 20px;
+  width: 20px;
+  height: 2px;
+  border: 1px solid $accent-color;
+  background-color: $accent-color;
+}
+
+.about-section__text {
+  padding-bottom: 20px;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.67;
+  color: $main-text-color;
+  letter-spacing: 0.03em;
+}
+
+.about-section__link {
+  color: $accent-color;
+  letter-spacing: 0.03;
+}
