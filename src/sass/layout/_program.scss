@@ -1,6 +1,9 @@
 .section-program  {
-    height: 2050px;
-    background: #111518;
+    height: 1500px;
+    
+}
+.section-program .container{
+    background-color: #111518;;
 }
 .section-title{
     color:$secondary-color;
@@ -67,6 +70,11 @@
 }
 
 @media screen and (min-width: 768px) {
+    .semestr{
+        flex-wrap: wrap;
+        width:280Px;
+        justify-content: center;
+    }
     .section-program{
         height:1355px;
         max-width: 100%;
@@ -94,6 +102,7 @@
     }
     .picture-img{
         margin-left: auto;
+        padding-bottom: 30%;
            
     }
 
