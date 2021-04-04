@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: space-between;
 }
+
 .logo{
     display:block;
     width: 100%;
@@ -33,6 +34,7 @@
     height: 100%;
     left: 0%;
     top: 0%;
+    z-index: 1;
     margin: 0 auto;
     background: rgba(17, 21, 24, 0.9);
 
@@ -95,6 +97,7 @@
     top:50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 1;
 }
 .navi{
     margin: 50px 0;
@@ -179,7 +182,7 @@
         position: static;
         display: flex;
         background-color: $secondary-color;
-
+     
         &_container{
             max-width: 100%;
             padding: 0;
