@@ -123,8 +123,8 @@
 }
 
 // .slick-current {
-//   width: 54px;
-//   height: 54px;
+//   width: 52px;
+//   height: 52px;
 //   border-radius: 50%;
 
 //   position: absolute;
@@ -134,9 +134,13 @@
 //   background-color: transparent;
 // }
 
-.reviews-section__list-item {
-  position: relative;
-}
+// .reviews-section__list-item > img {
+//   position: relative;
+// }
+
+// .reviews-section__list-item {
+//   position: relative;
+// }
 
 .slick-initialized .slick-slide {
   display: block;
@@ -145,12 +149,12 @@
 @media screen and (min-width: 768px) {
   .slick-prev {
     top: -170%;
-    left: -22%;
+    left: -43%;
   }
 
   .slick-next {
     top: -175%;
-    left: 116%;
+    left: 137%;
   }
 
   .reviews-section__gallery {
@@ -271,5 +275,19 @@
 
   .reviews-section__list-item:not(:nth-last-child(2)) {
     margin-right: 30px;
+  }
+
+  .reviews-section .container {
+    max-width: 1090px;
+  }
+
+  .slick-prev {
+    top: -370%;
+    left: -105%;
+  }
+
+  .slick-next {
+    top: -370%;
+    left: 198%;
   }
 }
