@@ -1,0 +1,117 @@
+.backdrop{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    top: 0%;
+    left: 0%;
+    background-color: rgba(17, 21, 24, 0.9);;
+
+    &.is-open{
+        display:block;
+    }
+}
+.modal_form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 90%;
+    height: 80%;
+    border-radius:2%;
+    margin: 0 auto;
+    margin-top: 50px;
+
+    position: relative;
+    background-color: white;
+
+    .title{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    &_close{
+        display: block;
+        outline: none;
+        border: none;
+        width: 30px;
+        height: 30px;
+        margin:0 auto;
+    
+        position: absolute;
+        top: 2%;
+        left: 89%;
+        background-color: transparent;
+        background-color:  #FF6B09;
+        border-radius: 50%;
+
+        &_svg{
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+            margin-left:2px;
+            
+        }
+    }
+    .label{
+        margin: 0 auto;
+        margin-bottom: 3px;
+    }
+    .input{
+        width: 100%;
+        max-width: 250px;
+        height: 40px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        &:focus{
+            outline:2px solid #FF6B09; 
+        }
+    }
+    .texterea{
+        width: 100%;
+        max-width: 250px;
+        height: 100px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        outline: none;
+        resize: none;
+    }
+    .label_checkbox{
+        display: inline-block;
+        text-align: center;
+    }
+    .input_checkbox{
+        display: inline-block;
+    }
+    .modal_button_sent{
+        display: block;
+         width: 100%;
+        max-width: 200px;
+        max-height: 48px;
+        margin: 0 auto;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        padding: 14px 0;
+
+        text-align: center;
+        text-transform: uppercase;
+        color: $accent-color;
+        background-color: transparent;
+        border: 2px solid #FF6B09;
+        outline: none;
+        border-radius: 5%;
+    }
+}
+@media screen and (min-width:1344px){
+    .modal_form{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 50%;
+        height: 80%;
+        border-radius:2%;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+    
+}
