@@ -45,7 +45,7 @@
         background-color:  #FF6B09;
         border-radius: 50%;
 
-        &_svg{
+        &-svg{
             display: flex;
             align-items: center;
             margin-top: 5px;
@@ -77,6 +77,11 @@
         margin-bottom: 20px;
         outline: none;
         resize: none;
+
+        &:focus{
+            outline:2px solid #FF6B09; 
+            border: none;
+        }
     }
     .label_checkbox{
         display: inline-block;
