@@ -4,7 +4,6 @@
     align-items: center;
     justify-content: space-between;
 }
-
 .logo{
     display:block;
     width: 100%;
@@ -38,6 +37,12 @@
     margin: 0 auto;
     background: rgba(17, 21, 24, 0.9);
 
+    &.is-open{
+        display: block;
+    }
+    &.is-open~.modal_button{
+        display: block;
+    }
     &_container{
         width: 100%;
         max-width: 480px;
@@ -45,30 +50,23 @@
         padding-right: 20px;
         padding-left: 20px;
     }
-    &_close{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+}
+.menu_wriper_close{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .button_menu{
     outline: none;
     border: none;
     margin: 38px 0 0 auto;
     background-color: transparent;
-
+    
     &.open{
         display: inline-block;
-        
-        &:focus+.menu_wriper{
-            display: block;
-        }
-        &:focus~.modal_button{
-            display: block;
-        }
     }
     &.close{
-        display: block;
+        display: inline-block;   
     }
     &_svg{
         display: flex;
@@ -82,7 +80,6 @@
     width: 100%;
     max-width: 260px;
     max-height: 48px;
-
     margin: 0 auto;
     padding: 14px 0;
 
@@ -93,11 +90,11 @@
     border: 2px solid #FF6B09;
     outline: none;
 
-    position: absolute;
-    top:50%;
+    position: fixed;
+    top:35%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1;
+    z-index: 2;
 }
 .navi{
     margin: 50px 0;
@@ -116,7 +113,9 @@
 }
 /* ====================== HEADER-TABLET =====================================*/
 @media screen and (min-width:768px){
-    
+    .header .container{
+        position: relative;
+    } 
     .logo{
         max-width: 125px;
         max-height: 48px;
@@ -139,23 +138,16 @@
     }
     .button_menu.open{
         margin-top: 42px;
-
-        &:focus~.modal_button{
-          opacity:0.2;
-       }
     }
     .navi{
         margin: 70px 25% 0px 25%;
     }
     .modal_button{
         display: block;
-        z-index: 2;
         position: absolute;
-        top: 69%;
-        left: 69%;
-    }
-    .header .container{
-        position: relative;
+        z-index: 0;
+        top: 68%;
+        left: 68%;
     }
 }
 /* ====================== HEADER-DASKTOP =====================================*/
@@ -170,13 +162,11 @@
             margin-right: 145px;
         }
     }
-    .button_menu{
-        &.open{
-            display: none;
-        }
-        &.close{
-            display: none;
-        }
+    .button_menu.open{
+        display: none;
+    }
+    .button_menu.close{
+        display: none;
     }
     .menu_wriper{
         position: static;
@@ -188,12 +178,6 @@
             padding: 0;
             margin: 0;
         }
-    }
-    .modal_button{
-        max-width: 333px;
-        max-height: 70px;
-        top:9%;
-        left: 90%;
     }
     .navi{
         margin: 60px 0 15px 0;
@@ -214,13 +198,14 @@
     }
     .modal_button{
         display: block;
-        z-index: 2;
         position: absolute;
-        top: 74%;
-        left: 86%;
+        z-index: 1;
+        top: 73%;
+        left: 83%;
 
         max-width: 336px;
-        height: 70px;
+        max-height: 70px;
+        padding: 25px 0 25px 0;
 
         font-style: normal;
         font-weight: bold;

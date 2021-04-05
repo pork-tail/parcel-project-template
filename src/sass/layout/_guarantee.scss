@@ -19,7 +19,7 @@
        border: none;
     }
     &_item:not(:last-child){
-        margin-bottom: 23px;
+        padding-bottom: 23px;
     }
     &_text{
         color: #3D3D3D;
@@ -73,7 +73,7 @@
             margin: 0 112px 0 164px;
         }
         &_item:not(:last-child){
-            margin-bottom: 20px;
+            padding-bottom: 20px;
         }
         &_text{
             padding-left: 30px;
