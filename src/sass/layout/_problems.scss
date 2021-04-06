@@ -10,7 +10,7 @@
     @media screen and (min-width: 1344px) {
         // background: linear-gradient(to bottom, #111518 79%, $secondary-color 21%,);
         background-image: url(../images/icon-problems-bgi.svg),
-        linear-gradient(to bottom, #111518 78%, $secondary-color 22%,);
+        linear-gradient(to bottom, #111518 81%, $secondary-color 19%,);
         background-position: 100% 40%;
         background-repeat: no-repeat;
         padding-top: 100px;
@@ -40,7 +40,6 @@
 }
 
 .section-title.problems {
-    // line-height: 1.36;
     text-align: left;
     color: $secondary-color;
     margin-bottom: 27px;
@@ -54,6 +53,7 @@
         margin-bottom: 70px;
     }
 }
+
 .problems_accent-text {
     color: $accent-color;
 }
