@@ -1,11 +1,19 @@
 .footer {
   padding-top: 30px;
-  background: linear-gradient(to bottom, $secondary-color 75%, #111518 25%);
+  background: linear-gradient(to bottom, $secondary-color 70%, #111518 30%);
 
   @media screen and (min-width: 768px) {
     background: linear-gradient(to bottom, $secondary-color 64%, #111518 36%);
+    padding-top: 0;
+  }
+
+  @media screen and (min-width: 1344px) {
+    background: linear-gradient(to bottom, $secondary-color 68%, #111518 32%);
+    padding-top: 0;
   }
 }
+
+
 
 .contacts-block {
   @media screen and (max-width: 768px) {
@@ -20,8 +28,8 @@
 
   @media screen and (min-width: 1344px) {
     justify-content: flex-start;
-    padding-top: 52px;
-    padding-bottom: 52px;
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
 }
 .logo-footer {
