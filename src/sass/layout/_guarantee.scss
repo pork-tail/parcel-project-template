@@ -1,5 +1,14 @@
 /* ====================== GUARATEE-MOBILE =====================================*/
+.guarantee.section {
+    padding-top: 0;
+}
+
+.guarantee_text {
+    letter-spacing: 0.04em;
+}
+
 .guarantee .title{
+    font-size: 26px;
     margin-bottom: 30px;
     text-align: center;
 }
@@ -33,7 +42,7 @@
 .guarantee_item::before{
     position: absolute;
     top: 0%;
-    left: -1.7%;
+    left: -2.5%;
     display: block;
     content: "";
     width: 14px;
@@ -47,10 +56,15 @@
 
 /* ====================== GUARATEE-TABLET-DASKTOP =====================================*/
 @media screen and (min-width:768px){
-    
+    .guarantee_list {
+        padding-right: 30px;
+        padding-left: 79px;
+    }
+
     .guarantee_text{
+
         padding-left: 24px;
-        padding-right: 50px;
+        // padding-right: 50px;
     }
     .guarantee_item::before{
         left: -1%;
@@ -70,7 +84,8 @@
             padding: 50px 0 45px 0; 
         }
         &_item{
-            margin: 0 112px 0 164px;
+            margin-left: 164px;
+            padding-right: 35px;
         }
         &_item:not(:last-child){
             padding-bottom: 20px;

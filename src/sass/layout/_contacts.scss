@@ -6,22 +6,22 @@
 
     
 }
-@media screen and (min-device-pixel-ratio:2),
-    screen and(min-resolution:192 dpi),
-    screen and(min-resolution: 2 dppx){
-        .study-program::after{
-            background-image:url(../images/contacts/class-room2xD.png);
+// @media screen and (min-device-pixel-ratio:2),
+//     screen and(min-resolution:192 dpi),
+//     screen and(min-resolution: 2 dppx){
+//         .study-program::after{
+//             background-image:url(../images/contacts/class-room2xD.png);
         
-        }
-}
-@media screen and (min-device-pixel-ratio:3),
-    screen and(min-resolution:288 dpi),
-    screen and(min-resolution: 3 dppx){
-        .study-program::after{
-            background-image:url(../images/contacts/class-room3xD.png);
+//         }
+// }
+// @media screen and (min-device-pixel-ratio:3),
+//     screen and(min-resolution:288 dpi),
+//     screen and(min-resolution: 3 dppx){
+//         .study-program::after{
+//             background-image:url(../images/contacts/class-room3xD.png);
         
-        }
-}
+//         }
+// }
 
 .section-title.contacts{
     font-weight: 800;
@@ -35,16 +35,17 @@
     margin-bottom: 30px;
     
 }
-.section.contacts{
+
+// .section.contacts{
     
-    background-color: #111518;
-    background-image:
-    url(../images/contacts/class-room1xD.png);
-    background-repeat: no-repeat ;
-    background-size:cover;
+//     background-color: #111518;
+//     background-image:
+//     url(../images/contacts/class-room1xD.png);
+//     background-repeat: no-repeat ;
+//     background-size:cover;
     
 
-}
+// }
 
 .contact-title-s{
     color:$accent-color;
@@ -104,25 +105,25 @@
   font-weight: 700;
   font-size: 12px;
   margin-top: 30px;
-  
+  border: none;
 }
 @media screen and (min-width: 768px){
-        @media screen and (min-device-pixel-ratio:2),
-        screen and(min-resolution:192 dpi),
-        screen and(min-resolution: 2 dppx){
-            .study-program::after{
-                background-image:url(../images/contacts/class-room2xD.png);
+    //     @media screen and (min-device-pixel-ratio:2),
+    //     screen and(min-resolution:192 dpi),
+    //     screen and(min-resolution: 2 dppx){
+    //         .study-program::after{
+    //             background-image:url(../images/contacts/class-room2xD.png);
             
-            }
-    }
-    @media screen and (min-device-pixel-ratio:3),
-        screen and(min-resolution:288 dpi),
-        screen and(min-resolution: 3 dppx){
-            .study-program::after{
-                background-image:url(../images/contacts/class-room3xD.png);
+    //         }
+    // }
+    // @media screen and (min-device-pixel-ratio:3),
+    //     screen and(min-resolution:288 dpi),
+    //     screen and(min-resolution: 3 dppx){
+    //         .study-program::after{
+    //             background-image:url(../images/contacts/class-room3xD.png);
             
-            }
-    }
+    //         }
+    // }
     .text-container{
         margin-bottom: 40px;
     }

@@ -1,4 +1,5 @@
 .reviews-section {
+  padding-top: 0;
   background-color: $secondary-color;
 }
 
@@ -141,13 +142,13 @@
 
 @media screen and (min-width: 768px) {
   .slick-prev {
-    top: -350%;
+    top: -365%;
     left: -43%;
   }
 
   .slick-next {
-    top: -350%;
-    left: 137%;
+    top: -363%;
+    left: 136%;
   }
 
   .reviews-section__gallery {
