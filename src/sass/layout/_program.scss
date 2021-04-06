@@ -1,58 +1,81 @@
-.section-program  {
-    height: 1500px;
-    .section-title{
-    
-        color:$secondary-color;
-        // padding: 50px 20px;
-    
-    }
+.section.program .container{
+    background-color: #111518;
+    position: relative;
+        
 }
-.section-program .container{
-    background-color: #111518;;
+.section.program-title{
+    color:$secondary-color;
+    text-align: center;
 }
-
-// .section-title{
-    
-//     color:$secondary-color;
-//     // padding: 50px 20px;
-
-// }
 
 .study-program{
-        padding-left: 120px;
-    
+     padding-left: 80px;   
 }
 
+.study-program::after{
+    position:absolute;
+    display: block;
+    bottom:-6%;
+    right:0%;
+    content:"";
+    height: 135px;
+    width: 120px;
+    background-image:url(../images/program/classroom1xM.png);
+    background-repeat: no-repeat;    
+}
+
+@media screen and (min-device-pixel-ratio:2),
+    screen and(min-resolution:192 dpi),
+    screen and(min-resolution: 2 dppx){
+        .study-program::after{
+            background-image:url(../images/program/classroom2xM.png);
+        
+        }
+}
+
+@media screen and (min-device-pixel-ratio:3),
+    screen and(min-resolution:288 dpi),
+    screen and(min-resolution: 3 dppx){
+        .study-program::after{
+            background-image:url(../images/program/classroom3xM.png);
+        
+        }
+}
 .semestr {
     position:relative;
     padding-left: 30px;
     color:$secondary-color;
     font-weight: 700;
-    margin-bottom: 5px;
     &:not(:last-child){
     border-left: 1px solid $secondary-color;
+    
 }
       
 }
 .semestr::before{
     position:absolute;
-    top:-1%;
+    top:-5px;
     left:-6px;
     display: block;
     content:"";
     width: 12px;
     height: 12px;
     margin-right: 80%px;
-    background-image: url(../images/Ellipse-orange.svg);
+    background-image: url(../images/ellipse-orange.svg);
     background-image:no repeat ;
     background:cover;
     align-items: center;
 }
 
 .modul{
-    padding-top: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     color:$accent-color;
     font-weight: 700;
+}
+.moduls{
+    padding-bottom: 20px;
+    
 }
 
 .modul::before{
@@ -65,29 +88,23 @@
     margin-right: 6px;
         
 }
-    
+.topics{
+    margin-top: 10px;
+}    
 .topic{
     position: relative;
-    padding-top: 5px;
     color:$main-text-color;
     font-weight: 500;
-}
-.picture-img{
-    margin-left: auto;
+    margin-top: -6px;
     
 }
 
 @media screen and (min-width: 768px) {
     .semestr{
         flex-wrap: wrap;
-        width:280Px;
         justify-content: center;
     }
-    .section-program{
-        height:1355px;
-        max-width: 100%;
-    }
-    .section-title{
+    .section.program-title{
         margin-right: 55%;
         // padding: 50px 20px;
     }
@@ -96,56 +113,96 @@
     }
     .moduls-container{
         display:flex;
-        justify-content:flex-start;
+       
         align-items: center;
        
     }  
     .moduls{
         display: flex;
-        justify-content:stretch;                    
+                            
     } 
     .modul{
-        
+        justify-content: space-between;
         margin-right: 50px;
+        width:180px;
     }
-    .picture-img{
-        margin-left: auto;
-        padding-bottom: 30%;
-           
+    .study-program::after{
+        display: block;
+        bottom:-25%;
+        right:2%;
+        content:"";
+        height: 396px;
+        width: 384px;
+        background-image:url(../images/program/classroom1xT.png);
+        background-repeat: no repeat;
     }
-
-
-    
+    @media screen and (min-device-pixel-ratio:2),
+    screen and(min-resolution:192 dpi),
+    screen and(min-resolution: 2 dppx){
+        .study-program::after{
+            background-image:url(../images/program/classroom2xT.png);
+        
+        }
+    }
+    @media screen and (min-device-pixel-ratio:3),
+    screen and(min-resolution:288 dpi),
+    screen and(min-resolution: 3 dppx){
+        .study-program::after{
+            background-image:url(../images/program/classroom3xT.png);
+        
+        }
+    }
 }    
 @media screen and (min-width: 1344px) {
-    .section-program{
-        height:1237px;
-        max-width: 100%;
-    }
     .study-program {
         display:flex;
         border-top:1px solid $secondary-color;
+                
+    }
+    .study-program::after{
+
+        bottom:-72%;
+        right:50%;
+        content:"";
+        height: 500px;
+        width: 670px;
+        background-image:url(../images/program/classroom1xD.png);
+        background-repeat: no repeat;
+        background-size: 550px;
+    }
+    @media screen and (min-device-pixel-ratio:2),
+    screen and(min-resolution:192 dpi),
+    screen and(min-resolution: 2 dppx){
+        .study-program::after{
+            background-image:url(../images/program/classroom2xD.png);
+        
+        }
+    }
+    @media screen and (min-device-pixel-ratio:3),
+    screen and(min-resolution:288 dpi),
+    screen and(min-resolution: 3 dppx){
+        .study-program::after{
+            background-image:url(../images/program/classroom3xD.png);
+        
+        }
     }
     .moduls{
         
         flex-direction: column;
     }
     .semestr{
-               
         padding-top: 3%;
+        padding-left: 0px;
     }
     .semestr::before{
-        top:-2%;
-        left:26px;
+        top:-8px;
+        left:-3px;
     }
     .semestr:not(:last-child) {
         border-left:0;
         
         
     }
-    .picture-img{
-        margin-left:0%;
-                  
-    }
+
 
 }
