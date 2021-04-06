@@ -1,6 +1,14 @@
+.footer {
+  padding-top: 30px;
+  background: linear-gradient(to bottom, $secondary-color 75%, #111518 25%);
+
+  @media screen and (min-width: 768px) {
+    background: linear-gradient(to bottom, $secondary-color 64%, #111518 36%);
+  }
+}
+
 .contacts-block {
   @media screen and (max-width: 768px) {
-    padding-top: 30px;
     text-align: center;
   }
 
@@ -35,8 +43,7 @@
   }
 
   @media screen and (min-width: 1344px) {
-    margin-right: auto;
-    margin-left: 360px;
+    margin-left: 290px;
   }
 }
 .contacts-phone {
@@ -108,13 +115,6 @@
   }
 }
 
-.copy-block {
-  background-color: #111518;
-
-  @media screen and (min-width:1344px) {
-      max-width: 1344px;
-  }
-}
 
 .copy-text {
   padding-top: 21px;
@@ -130,7 +130,7 @@
       line-height: 2;
 
       display: flex;
-      align-items: center;
+      justify-content: center;
 
       color: #B9B9B9;
   }
@@ -140,12 +140,7 @@
   }
 }
 
-.logo-footer {
-  @media screen and (min-width: 1344px) {
-    margin-left: 183px;
-    
-  }
-}
+
 
 .logo-footer>.logo-flex {
   display: flex;
