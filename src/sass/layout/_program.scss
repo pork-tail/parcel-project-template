@@ -6,12 +6,12 @@
 .section.program-title{
     color:$secondary-color;
     text-align: center;
- 
 }
+
 .study-program{
-     padding-left: 80px;
-   
+     padding-left: 80px;   
 }
+
 .study-program::after{
     position:absolute;
     display: block;
@@ -21,9 +21,7 @@
     height: 135px;
     width: 120px;
     background-image:url(../images/program/classroom1xM.png);
-    background-repeat: no-repeat;
-     
-    
+    background-repeat: no-repeat;    
 }
 
 @media screen and (min-device-pixel-ratio:2),
@@ -34,6 +32,7 @@
         
         }
 }
+
 @media screen and (min-device-pixel-ratio:3),
     screen and(min-resolution:288 dpi),
     screen and(min-resolution: 3 dppx){
@@ -107,7 +106,7 @@
     }
     .section.program-title{
         margin-right: 55%;
-        padding: 50px 20px;
+        // padding: 50px 20px;
     }
     .study-program{
         padding-left:10%;
