@@ -1,15 +1,23 @@
 .section-program  {
     height: 1500px;
+    .section-title{
     
+        color:$secondary-color;
+        // padding: 50px 20px;
+    
+    }
 }
 .section-program .container{
     background-color: #111518;;
 }
-.section-title{
-    color:$secondary-color;
-    padding: 50px 20px;
 
-}
+// .section-title{
+    
+//     color:$secondary-color;
+//     // padding: 50px 20px;
+
+// }
+
 .study-program{
         padding-left: 120px;
     
@@ -81,7 +89,7 @@
     }
     .section-title{
         margin-right: 55%;
-        padding: 50px 20px;
+        // padding: 50px 20px;
     }
     .study-program{
         padding-left:10%;
