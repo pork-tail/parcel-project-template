@@ -9,7 +9,7 @@
  
 }
 .study-program{
-     padding-left: 120px;
+     padding-left: 80px;
    
 }
 .study-program::after{
@@ -163,12 +163,13 @@
     .study-program::after{
 
         bottom:-72%;
-        right:56%;
+        right:50%;
         content:"";
         height: 500px;
         width: 670px;
         background-image:url(../images/program/classroom1xD.png);
         background-repeat: no repeat;
+        background-size: 550px;
     }
     @media screen and (min-device-pixel-ratio:2),
     screen and(min-resolution:192 dpi),
