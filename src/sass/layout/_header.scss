@@ -114,7 +114,8 @@
         letter-spacing: 0.03em;
         color: $secondary-color;
 
-        &.current{
+        &:hover,
+        &:focus{
             color: $accent-color;
         }
     }
@@ -167,10 +168,12 @@
         left: 68%;
     }
 }
-
 /* ====================== HEADER-DASKTOP =====================================*/
 @media screen and (min-width:1344px){
     
+    .header .container {
+        padding-top: 45px;
+    }
     .logo{
         &.white{
             display: none;
@@ -195,9 +198,12 @@
             padding: 0;
             margin: 0;
         }
+        &_close{
+            padding: 0;
+        }
     }
     .navi{
-        margin: 60px 0 15px 0;
+        margin:0;
           
         &_list{
             display: flex;
