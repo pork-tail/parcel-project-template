@@ -13,10 +13,15 @@
   }
 }
 
-
+.footer-boxes {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    
+  }
+}
 
 .contacts-block {
-  @media screen and (max-width: 768px) {
+  @media screen and (min-width: 768px) {
     text-align: center;
   }
 
@@ -27,6 +32,7 @@
   }
 
   @media screen and (min-width: 1344px) {
+    margin: 0 auto;
     justify-content: flex-start;
     padding-top: 25px;
     padding-bottom: 25px;
@@ -45,9 +51,10 @@
 }
 .address-wrap {
   @media screen and (min-width: 768px) {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     position: relative;
+    margin-left: auto;
   }
 
   @media screen and (min-width: 1344px) {
@@ -110,6 +117,9 @@
   margin-top: 30px;
   display: inline-block;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .instagram-link::before {
@@ -120,6 +130,7 @@
     height: 40px;
     position: absolute;
     right: 64px;
+    
   }
 }
 
@@ -145,6 +156,12 @@
 
   @media screen and (max-width: 767px) {
     text-align: center;
+  }
+}
+
+.copy-block {
+  @media screen and (min-width: 1344px) {
+    margin: 0 auto;
   }
 }
 
