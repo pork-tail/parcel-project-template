@@ -41,20 +41,25 @@
         position: absolute;
         top: 2%;
         left: 89%;
-        background-color: transparent;
-        background-color:  #FF6B09;
         border-radius: 50%;
+
+        &:hover,
+        &:focus{
+            background-color: transparent;
+            background-color:  #FF6B09;
+        }
 
         &-svg{
             display: flex;
             align-items: center;
             margin-top: 5px;
-            margin-left:2px;
-            
+            margin-left:1px;
+                      
         }
     }
     .label{
-        margin: 0 auto;
+        display: block;
+        margin-left: 75px;
         margin-bottom: 3px;
     }
     .input{
@@ -63,6 +68,7 @@
         height: 40px;
         margin: 0 auto;
         margin-bottom: 20px;
+        padding-left: 20px;
         
         &:focus{
             outline:2px solid #FF6B09; 
@@ -75,6 +81,8 @@
         height: 100px;
         margin: 0 auto;
         margin-bottom: 20px;
+        padding-left: 20px;
+        padding-top: 10px;
         outline: none;
         resize: none;
 
@@ -109,11 +117,31 @@
         border-radius: 5%;
     }
 }
+@media screen and (min-width:768px){
+    .modal_form {
+        max-width: 80%;
+
+        .label{
+            margin-left: 120px;
+            margin-bottom: 3px;
+        }
+        .input{
+            max-width: 320px;
+            height: 40px;
+        }
+        .texterea{
+            max-width: 320px; 
+        }
+    }
+}
 @media screen and (min-width:1344px){
     .modal_form{
         display: flex;
         max-width: 50%;
         height: 80%;
-    }
-    
+
+        .label{
+            margin-left: 170px;
+        }
+    }    
 }
