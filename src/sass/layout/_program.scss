@@ -135,8 +135,11 @@
     } 
     .modul{
         justify-content: space-between;
-        margin-right: 50px;
         width:180px;
+
+        &:not(:last-child) {
+            margin-right: 50px;
+        }
     }
     .study-program::after{
         display: block;
