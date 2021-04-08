@@ -10,13 +10,25 @@
 
     &.is-open{
         display:block;
+
+        .container {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    
     }
 }
-.modal_form{
+
+.modal_form {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 90%;
+    max-width: 92%;
+
+    @media screen and (max-width: 480px) {
+        width: 294px;
+    }
+
     height: 80%;
     border-radius:2%;
     margin: 0 auto;
@@ -57,11 +69,18 @@
                       
         }
     }
-    .label{
+
+    .label {
         display: block;
-        margin-left: 60px;
-        margin-bottom: 3px;
+        margin-left: 86px;
+        // margin-bottom: 3px;
+
+        @media screen and (max-width: 480px) {
+            margin-left: 11px;
+        }
     }
+
+
     .input{
         width: 100%;
         max-width: 250px;
@@ -75,6 +94,7 @@
             border: none;
         }
     }
+
     .texterea{
         width: 100%;
         max-width: 250px;
@@ -91,6 +111,7 @@
             border: none;
         }
     }
+
     .label_checkbox{
         display: inline-block;
         text-align: center;
@@ -116,16 +137,18 @@
         border-radius: 5%;
     }
 }
-@media screen and (min-width:768px){
+
+@media screen and (min-width:768px) {
+
     .modal_form {
         max-width: 80%;
-        margin-top: 15%;
+        margin-top: 7%;
         
         &_close{
           left: 90%;
         }
         .label{
-            margin-left: 102px;
+            margin-left: 138px;
             margin-bottom: 3px;
         }
         .input{
@@ -137,15 +160,17 @@
         }
     }
 }
-@media screen and (min-width:1344px){
-    .modal_form{
+
+@media screen and (min-width:1344px) {
+
+    .modal_form {
         display: flex;
         max-width: 50%;
         height: 80%;
         margin-top: 10%;
 
-        .label{
-            margin-left: 157px;
+        .label {
+            margin-left: 165px;
         }
-    }    
+    }
 }
